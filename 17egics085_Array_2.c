@@ -3,14 +3,12 @@ void main(){
 	
 	int n,i,h;
 	int arr[20],sum1=0, sum2=0;
-	
-	printf("Enter size: ");
+
 	scanf("%d",&n);
 	
 	if(n%2==0){
 		
 		h = n/2;
-		printf("Enter elements\n");
 		for(i=0;i<n;i++){
 			scanf("%d",&arr[i]);
 		}	
