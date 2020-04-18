@@ -1,10 +1,13 @@
 #include<stdio.h>
+#include<stdlib.h>
+
 void main(){
 	
 	int n,i,h;
-	int arr[20],sum1=0, sum2=0;
-
+	int *arr,sum1=0, sum2=0;
+	
 	scanf("%d",&n);
+	arr = (int*)malloc(n*sizeof(int));
 	
 	if(n%2==0){
 		

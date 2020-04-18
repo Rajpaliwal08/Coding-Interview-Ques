@@ -1,39 +1,39 @@
 #include<stdio.h>
-void main(){
-	
-	int arr[20];
-	int i,n;
-
-	scanf("%d",&n);
-	printf("Enter the elements:\n");
-	for(i=0;i<n;i++){
-		scanf("%d",&arr[i]);
-	}
-	
-	frequency(arr, n);
-}
+#include<stdlib.h>
 
 void frequency(int arr[], int n){
 	
-	int freq[n],i,max,temp;
+	int i,j,count,a=0,temp;
 	
-	for(i=0; i<n; i++){
-		freq[i] = 0;
-	}
-	
-	for(i=0; i<n; i++){
-		freq[arr[i]]++;
-	}
-	
-	max=freq[0];
-	for(i=0; i<n; i++){
-		if(freq[i]!=0){
-			if(freq[i]>max){
-				max=freq[i];
-				temp=i;
+	for(i=0;i<n;i++){
+		count=1;
+		for(j=i+1;j<n;j++){
+			if(arr[i]==arr[j]){
+				count++;
 			}
+		}
+		
+		if(a<count){
+			a=count;
+			temp=arr[i];
 		}
 	}
 	printf("%d",temp);
-	
 }
+
+void main(){
+	
+	int*arr;
+	int i,n;
+
+	scanf("%d",&n);
+	
+	arr = (int*)malloc(n*sizeof(int));
+	
+	for(i=0;i<n;i++){
+		scanf("%d",&arr[i]);
+	}
+	frequency(arr, n);
+}
+
+
