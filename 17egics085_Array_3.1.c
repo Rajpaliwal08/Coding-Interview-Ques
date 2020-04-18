@@ -1,8 +1,8 @@
 #include<stdio.h>
 void main(){
 	
-	int i,j,n,temp;
-	int *arr;
+    int *arr;
+    int i,j,n,temp;
 	
 	scanf("%d",&n);
 	
